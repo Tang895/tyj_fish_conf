@@ -17,3 +17,8 @@ end
 function cdkitty
     cd ~/.config/kitty/
 end
+
+function set_proxy
+    set -x http_proxy http://localhost:11223
+    set -x https_proxy https://localhost:11223
+end
