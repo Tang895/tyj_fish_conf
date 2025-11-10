@@ -6,17 +6,19 @@ end
 # alias cls="clear"
 alias ff="fastfetch"
 alias python="python3"
-set home_path = ""
-
+set home_path ""
+set os_type ""
 # set -x PATH $PATH /home/linuxbrew/.linuxbrew/bin/
 
 # env
 switch (uname)
     case "Linux"
         echo "This is Linux"
+        set os_type "Linux"
         # home_path = ~/ianhome/
     case "Darwin"
         echo "This is macOS"
+        set os_type "darwin"
         # home_path = ~/ianhome/
     case "FreeBSD"
         echo "This is FreeBSD"
@@ -88,4 +90,9 @@ end
 
 source ~/.config/fish/path.fish
 
-add_path /home/linuxbrew/.linuxbrew/bin/
+
+# echo $os_type
+if test "$os_type" = "Linux"
+    echo "add linux homebrew path"
+    add_path /home/linuxbrew/.linuxbrew/bin/
+end
