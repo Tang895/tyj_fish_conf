@@ -94,5 +94,5 @@ source ~/.config/fish/path.fish
 # echo $os_type
 if test "$os_type" = "Linux"
     echo "add linux homebrew path"
-    add_path /home/linuxbrew/.linuxbrew/bin/
+    #add_path /home/linuxbrew/.linuxbrew/bin/
 end
